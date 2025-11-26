@@ -21,7 +21,7 @@ typedef struct {
     int attack_power;
 } Boss;
 
-// Attack damage, ex: ETF-> 7 to 12 damage; just helper funct
+// Attack damage, ex: ETF-> 7 to 12 damage; just helper function
 int randomRange(int min, int max) {
     return rand() % (max - min + 1) + min; // build own function so ex: range(0,100)
     // ignore rand(), (100-1+1)= 100 so 0 to 99; now +min/+1 so range = 1 to 100 back to normal
@@ -56,7 +56,7 @@ int cashHold() {
 }
 
 int main() { // main() include all scope of declaration
-    srand(time(NULL)); //seed tandom - srand()
+    srand(time(NULL)); //seed random - srand()
     Player player; // struct temporary variable
     Boss boss;
 
@@ -148,7 +148,7 @@ int main() { // main() include all scope of declaration
             player.hp = player.hp - damage;
             printf("Boss uses RECESSION SMASH ATTACK! You got hit by %d damage.\n", damage);
         } else if (attack >= 71 && attack <= 90) {
-            int damage = randomRange(0,15); //When gov increase rate, consumer havent panic then fine, if panic then market dips
+            int damage = randomRange(0,15); //When gov increase rate, consumer hasn't panic then fine, if panic then market dips
             player.hp = player.hp - damage;
             printf("Boss uses INTEREST RATE HIKE! You got hit by %d damage.\n", damage);
         } else {
